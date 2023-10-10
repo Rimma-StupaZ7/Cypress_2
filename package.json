@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+   "test:booking": "npx cypress run --record --group booking --spec \"cypress/e2e/booking.cy.js\" --ci-build-id 2", 
+    "test:loginAdmin": "npx cypress run --record --group loginAdmin --spec \"cypress/e2e/loginAdmin.cy.js\" --ci-build-id 2",
+    "test:mainPage": "cypress run --record -- group mainPage --spec \"cypress/e2e/mainPage.cy.js\" --ci-build-id 2", 
+    "test:parallel": "npm run test:booking & npm run test:loginAdmin & npm run test:mainPage",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
